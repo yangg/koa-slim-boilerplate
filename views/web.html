@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="{{'is-dev' if not isProd}}">
+<head>
+  <title>koa-slim-boilerplate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+<style>
+#root > .fe-loader{position:fixed}
+.fe-loader,.fe-loader::before,.fe-loader::after{width:12px;height:12px;border-radius:50%;-webkit-animation:loader10m 2s ease-in-out infinite;animation:loader10m 2s ease-in-out infinite}.fe-loader{position:absolute;top:37.2%;left:50%;-webkit-transform:translate(-37.2%,-50%);transform:translate(-37.2%,-50%)}.fe-loader:before{content:"";position:absolute;top:0;left:-25px;-webkit-animation-name:loader10g;animation-name:loader10g}.fe-loader:after{content:"";position:absolute;top:0;left:25px;-webkit-animation-name:loader10d;animation-name:loader10d}@-webkit-keyframes loader10g{0%{background-color:#4885ed}33%{background-color:#3CBA54}67%{background-color:#3CBA54}100%{background-color:#3CBA54}}@keyframes loader10g{0%{background-color:#4885ed}33%{background-color:#3CBA54}67%{background-color:#3CBA54}100%{background-color:#3CBA54}}@-webkit-keyframes loader10m{0%{background-color:#3CBA54}33%{background-color:#4885ed}67%{background-color:#3CBA54}100%{background-color:#3CBA54}}@keyframes loader10m{0%{background-color:#3CBA54}33%{background-color:#4885ed}67%{background-color:#3CBA54}100%{background-color:#3CBA54}}@-webkit-keyframes loader10d{0%{background-color:#3CBA54}33%{background-color:#3CBA54}67%{background-color:#4885ed}100%{background-color:#3CBA54}}@keyframes loader10d{0%{background-color:#3CBA54}33%{background-color:#3CBA54}67%{background-color:#4885ed}100%{background-color:#3CBA54}}
+</style>
+</head>
+<body>
+  <div id="root">
+    <div class="fe-loader"></div>
+    Hello, <a href="hello">{{name}}</a>
+  </div>
+<script>
+setTimeout(() => {
+  document.querySelector('.fe-loader').style.display = 'none'
+}, 1500)
+</script>
+</body>
+</html>

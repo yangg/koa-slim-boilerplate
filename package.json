@@ -1,0 +1,64 @@
+{
+  "name": "koa-slim-boilerplate",
+  "version": "1.0.0",
+  "description": "koa-slim boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "pm2 deploy production",
+    "dev": "nodemon --ignore src --ext \"js html\" index.js",
+    "migrate": "db-migrate --config config/database.json",
+    "lint-staged": "lint-staged",
+    "start": "NODE_ENV=production node index.js",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "standard": {
+    "envs": [
+      "browser"
+    ],
+    "parser": "babel-eslint",
+    "globals": [
+      "logger"
+    ]
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "koa-static": "^3.0.0",
+    "lint-staged": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "pre-commit": "^1.2.2",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "db-migrate": "^0.10.0-beta.20",
+    "db-migrate-base": "git+https://github.com/yangg/db-migrate-base.git",
+    "db-migrate-pg": "git+https://github.com/yangg/pg.git",
+    "fundebug-nodejs": "^0.0.8",
+    "koa": "^2.2.0",
+    "koa-get-body": "^1.0.0",
+    "koa-morgan": "^1.0.1",
+    "koa-nunjucks-2": "^2.2.0",
+    "koa-redis": "^3.0.0",
+    "koa-session": "^5.0.0",
+    "koa-slim": "^1.0.3",
+    "lodash": "^4.17.4",
+    "pg": "^6.2.3",
+    "sequelize": "^3.30.4",
+    "winston": "^2.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangg/koa-slim-boilerplate.git"
+  }
+}

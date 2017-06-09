@@ -1,0 +1,4 @@
+{
+  "development": "postgres://postgres:PWD@120.25.195.92/pocket",
+  "production": "postgres://postgres:PWD@120.25.195.92/pocket"
+}

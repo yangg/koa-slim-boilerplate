@@ -1,0 +1,11 @@
+# web projects
+node_modules/
+# webpack profile stats
+stats.json
+
+# framework
+public/assets/
+
+
+public/test*
+test*

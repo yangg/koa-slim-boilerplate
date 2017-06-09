@@ -1,0 +1,11 @@
+
+module.exports = function (config) {
+  config.plugins.push('webpack-hot')
+  return {
+    listenHost: '0.0.0.0',
+    keys: [ 'secret key' ],
+    'webpack-hot': Object.assign(require('./webpack')(), {
+      // devtool: 'cheap-module-eval-source-map'
+    })
+  }
+}

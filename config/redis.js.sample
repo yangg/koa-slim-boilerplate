@@ -1,0 +1,7 @@
+
+module.exports = {
+  redis: {
+    host: '120.25.195.92',
+    auth_pass: 'PWD'
+  }
+}

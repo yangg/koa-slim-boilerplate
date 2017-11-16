@@ -3,13 +3,14 @@
 // const publicRoutes = [
 //   '/admin/checkLogin'
 // ]
-module.exports = (router, home, app) => {
+module.exports = (router, app) => {
   // router.all('*', (ctx, next) => {
   //   if (!(ctx.path.indexOf('/web') > -1 || publicRoutes.indexOf(ctx.path) > -1)) {
   //     ctx.assert(ctx.session.user, 403, '未登录或登录已过期！')
   //   }
   //   return next()
   // })
-  router.get('', home.index)
-  router.get('hello', home.hello)
+  const home = app.getController('home')
+  router.get('/', home.index)
+  router.get('/hello', home.hello)
 }

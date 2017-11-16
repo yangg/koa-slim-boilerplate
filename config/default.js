@@ -2,7 +2,7 @@
 const appPackage = require('../package')
 module.exports = (config) => ({
   name: appPackage.name,
-  port: 6650,
+  port: 3600,
   middleware: [
     'ignore',
     'koa-onerror',

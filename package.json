@@ -4,16 +4,22 @@
   "description": "koa-slim boilerplate",
   "main": "index.js",
   "scripts": {
-    "deploy": "pm2 deploy production",
     "dev": "nodemon --ignore src --ext \"js html\" index.js",
     "migrate": "db-migrate --config config/database.json",
     "start": "NODE_ENV=production node index.js",
-    "test": "jest"
+    "test": "jest",
+    "postversion": "git push"
   },
   "husky": {
     "hooks": {
+      "commitmsg": "commitlint -e",
       "precommit": "lint-staged"
     }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
   },
   "lint-staged": {
     "*.js": [
@@ -41,6 +47,8 @@
     "standard": "^10.0.2"
   },
   "dependencies": {
+    "@commitlint/cli": "^5.2.0",
+    "@commitlint/config-angular": "^5.1.1",
     "axios": "^0.16.1",
     "db-migrate": "^0.10.0-beta.20",
     "db-migrate-base": "git+https://github.com/yangg/db-migrate-base.git",
